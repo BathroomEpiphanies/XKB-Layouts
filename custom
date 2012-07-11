@@ -1,0 +1,496 @@
+// Filename 'custom'
+//
+// An xkb geometry file to generate custom 104/105 layouts.
+// Written by Fredrik Atmer, Free to use in whatever way you want.
+//
+// Create a symbolic link /usr/share/X11/xkb/geometry/custom (or equivalent)
+// pointing to this file in your working directory. Or figure out how the
+// xkb path system works..
+//
+// $> cd /usr/share/X11/xkb/geometry/; sudo ln -s /home/fredrik/custom custom; cd -
+//
+// To render output
+//
+// xkbcomp -m [U]layout[/U] custom; xkbprint [U]layout[/U].xkm
+//
+// Also see the man pages for the xkb-commands for further options.
+//
+
+xkb_geometry "ansi" {
+  include "custom(keys_regular)"
+  width=462; 
+  height=136;
+  shape.cornerRadius=1;
+  text.color="black";
+  section.left=5;
+  row.left=1;
+  key.shape="W100";
+  key.gap=1;
+  include "custom(function_regular)"
+  include "custom(num_regular_bksp)"
+  include "custom(tab)"
+  include "custom(home_regular)"
+  include "custom(shift_regular)"
+  include "custom(return_ansi)"
+  include "custom(lshift_ansi)"
+  include "custom(rshift_regular)"
+  include "custom(space_filco_regular)"
+  include "custom(nav_block_regular)"
+  include "custom(numpad_regular)"
+//  include "custom(numpad_function_row)"
+};
+
+xkb_geometry "japanese" {
+  include "custom(keys_regular)"
+  width=462; 
+  height=136;
+  shape.cornerRadius=1;
+  text.color="black";
+  section.left=5;
+  row.left=1;
+  key.shape="W100";
+  key.gap=1;
+  include "custom(function_regular)"
+  include "custom(num_regular_bksp)"
+  include "custom(tab)"
+  include "custom(home_regular)"
+  include "custom(shift_regular)"
+  include "custom(return_iso)"
+  include "custom(lshift_ansi)"
+  include "custom(rshift_regular)"
+  include "custom(space_filco_japanese)"
+  include "custom(nav_block_regular)"
+  include "custom(numpad_regular)"
+//  include "custom(numpad_function_row)"
+};
+
+xkb_geometry "realforce" {
+  include "custom(keys_regular)"
+  width=462; 
+  height=136;
+  shape.cornerRadius=1;
+  text.color="black";
+  section.left=5;
+  row.left=1;
+  key.shape="W100";
+  key.gap=1;
+  include "custom(function_regular)"
+  include "custom(num_regular_bksp)"
+  include "custom(tab)"
+  include "custom(home_regular)"
+  include "custom(shift_symmetric)"
+  include "custom(return_ansi)"
+  include "custom(lshift_symmetric)"
+  include "custom(rshift_symmetric)"
+  include "custom(space_realforce)"
+  include "custom(nav_block_regular)"
+  include "custom(numpad_regular)"
+//  include "custom(numpad_function_row)"
+};
+
+xkb_geometry "arrows" {
+  include "custom(keys_regular)"
+  width=460; 
+  height=136;
+  shape.cornerRadius=1;
+  text.color="black";
+  section.left=5;
+  row.left=1;
+  key.shape="W100";
+  key.gap=1;
+  include "custom(function_regular)"
+  include "custom(num_regular_bksp)"
+  include "custom(tab)"
+  include "custom(home_regular)"
+  include "custom(shift_symmetric)"
+  include "custom(return_ansi)"
+  include "custom(lshift_symmetric)"
+  include "custom(rshift_arrow_block)"
+  include "custom(space_arrows)"
+  include "custom(nav_block_regular)"
+  include "custom(numpad_regular)"
+};
+
+xkb_geometry "symmetric" {
+  include "custom(keys_regular)"
+  width=460; 
+  height=136;
+  shape.cornerRadius=1;
+  text.color="black";
+  section.left=5;
+  row.left=1;
+  key.shape="W100";
+  key.gap=1;
+  include "custom(function_regular)"
+  include "custom(num_split_bksp)"
+  include "custom(tab)"
+  include "custom(home_symmetric2)"
+  include "custom(shift_symmetric)"
+  include "custom(return_symmetric)"
+  include "custom(lshift_symmetric)"
+  include "custom(rshift_symmetric2)"
+  include "custom(space_symmetric)"
+  include "custom(nav_block_regular)"
+  include "custom(numpad_regular)"
+};
+
+xkb_geometry "straight" {
+  include "custom(keys_regular)"
+  width=460; 
+  height=136;
+  shape.cornerRadius=1;
+  text.color="black";
+  section.left=5;
+  row.left=1;
+  key.shape="W100";
+  key.gap=1;
+  include "custom(function_regular)"
+  include "custom(num_straight)"
+  include "custom(tab_straight)"
+  include "custom(home_straight)"
+  include "custom(shift_straight)"
+  include "custom(return_straight)"
+  include "custom(lshift_straight)"
+  include "custom(rshift_straight)"
+  include "custom(space_filco_regular)"
+  include "custom(nav_block_regular)"
+  include "custom(numpad_regular)"
+};
+
+xkb_geometry "7bit" {
+  include "custom(keys_regular)"
+  width=462; 
+  height=136;
+  shape.cornerRadius=1;
+  text.color="black";
+  section.left=5;
+  row.left=1;
+  key.shape="W100";
+  key.gap=1;
+  include "custom(function_filled)"
+  include "custom(num_split_bksp)"
+  include "custom(tab)"
+  include "custom(home_regular)"
+  include "custom(shift_regular)"
+  include "custom(return_symmetric)"
+  include "custom(lshift_ansi)"
+  include "custom(rshift_regular)"
+  include "custom(space_7bit)"
+  include "custom(nav_block_filled)"
+  include "custom(numpad_regular)"
+  include "custom(numpad_function_row)"
+};
+
+xkb_geometry "7bitHex" {
+  include "custom(keys_regular)"
+  width=462; 
+  height=136;
+  shape.cornerRadius=1;
+  text.color="black";
+  section.left=5;
+  row.left=1;
+  key.shape="W100";
+  key.gap=1;
+  include "custom(function_regular)"
+  include "custom(num_split_bksp)"
+  include "custom(tab)"
+  include "custom(home_hexagonal)"
+  include "custom(shift_hexagonal)"
+  include "custom(return_hexagonal)"
+  include "custom(lshift_hexagonal)"
+  include "custom(rshift_hexagonal)"
+  include "custom(space_7bit)"
+  include "custom(nav_block_regular)"
+  include "custom(numpad_regular)"
+};
+
+
+
+// Function rows.
+partial hidden xkb_geometry "function_regular" {
+  section "function" {top=5;
+    row {top=1;keys {<ESC>,{<F1>,21},<F2>,<F3>,<F4>,{<F5>,11},<F6>,<F7>,<F8>,{<F9>,11},<F10>,<F11>,<F12>};};
+  };
+};
+partial hidden xkb_geometry "function_filled" {
+  section "function" {top=5;
+    row {top=1;keys {<ESC>,<?>,<F1>,<F2>,<F3>,<F4>,<?>,<F5>,<F6>,<F7>,<F8>,<F9>,<F10>,<F11>,<F12>};};
+  };
+};
+
+
+// Alphanumeric sections for the regular stagger.
+partial hidden xkb_geometry "num_regular_bksp" {
+  section "num" {top=30; 
+    row {top=  1; keys {<~>,<1>,<2>,<3>,<4>,<5>,<6>,<7>,<8>,<9>,<0>,<->,<=>,{<BKSP>,"W200"}};};
+  };
+};
+partial hidden xkb_geometry "num_split_bksp" {
+  section "num" {top=30; 
+    row {top=  1; keys {<~>,<1>,<2>,<3>,<4>,<5>,<6>,<7>,<8>,<9>,<0>,<->,<=>,<?>,<BKSP>};};
+  };
+};
+partial hidden xkb_geometry "tab" {
+  section "tab" {top=30; 
+    row {top= 21; keys {{<TAB>,"W150"},<Q>,<W>,<E>,<R>,<T>,<Y>,<U>,<I>,<O>,<P>,<[>,<]>};};
+  };
+};
+partial hidden xkb_geometry "home_regular" {
+  section "home" {top=30; 
+    row {top= 41; keys {{<CAPS>,"W175"},<A>,<S>,<D>,<F>,<G>,<H>,<J>,<K>,<L>,<;>,<'>};};
+  };
+};
+partial hidden xkb_geometry "shift_regular" {
+  section "shift" {top=30; 
+    row {top= 61; keys {{<Z>,46},<X>,<C>,<V>,<B>,<N>,<M>,<,>,<.>,</>};};
+  };
+};
+partial hidden xkb_geometry "return_ansi" {
+  section "return" {top=30; 
+    row {top=  21; keys {{<\\\\>,"W150",271}};};
+    row {top=  41; keys {{<RTRN>,"W225",256}};};
+  };
+};
+partial hidden xkb_geometry "return_iso" {
+  section "return" {top=30; 
+    row {top=  21; keys {{<RTRN>,"ISOR",271}};};
+    row {top=  41; keys {{<\\\\>,256}};};
+  };
+};
+partial hidden xkb_geometry "lshift_ansi" {
+  section "lshift" {top=30; 
+    row {top=  61; keys {{<SHFT>,"W225"}};};
+  };
+};
+partial hidden xkb_geometry "lshift_iso" {
+  section "lshift" {top=30; 
+    row {top=  61; keys {{<SHFT>,"W125"},<|>};};
+  };
+};
+partial hidden xkb_geometry "rshift_regular" {
+  section "rshift" {top=30; 
+    row {top=  61; keys {{<SHFT>,"W275",246}};};
+  };
+};
+
+// Alphanumeric sections rows for the "Symmetric Stagger"
+partial hidden xkb_geometry "home_symmetric" {
+  section "home" {top=30; 
+    row {top= 41; keys {{<CAPS>,"W125"},<A>,<S>,<D>,<F>,<G>,{<H>,11},<J>,<K>,<L>,<;>,<'>};};
+  };
+};
+partial hidden xkb_geometry "home_symmetric2" {
+  section "home" {top=30; 
+    row {top= 41; keys {{<CAPS>,"W125"},<A>,<S>,<D>,<F>,<G>,<?>,{<?>,11},<H>,<J>,<K>,<L>};};
+  };
+};
+partial hidden xkb_geometry "shift_symmetric" {
+  section "shift" {top=30; 
+    row {top= 61; keys {{<Z>,41},<X>,<C>,<V>,<B>,<N>,<M>,<,>,<.>,</>};};
+  };
+};
+partial hidden xkb_geometry "return_symmetric" {
+  section "return" {top=30; 
+    row {top=  21; keys {{<\\\\>,"W150",271}};};
+    row {top=  41; keys {{<?>,256},{<RTRN>,"W125"}};};
+  };
+};
+partial hidden xkb_geometry "lshift_symmetric" {
+  section "lshift" {top=30; 
+    row {top=  61; keys {{<SHFT>,"W200"}};};
+  };
+};
+partial hidden xkb_geometry "rshift_symmetric" {
+  section "rshift" {top=30; 
+    row {top=  61; keys {{<SHFT>,"W300",241}};};
+  };
+};
+partial hidden xkb_geometry "rshift_symmetric2" {
+  section "rshift" {top=30; 
+    row {top=  61; keys {{<?>,241},{<SHFT>,"W200"}};};
+  };
+};
+partial hidden xkb_geometry "rshift_arrow_block" {
+  section "rshift" {top=30; 
+    row {top=  61; keys {{<SHFT>,241},<UP>,<?>};};
+    row {top=  81; keys {{<LEFT>,241},<DOWN>,<RGHT>};};
+  };
+};
+
+
+// Alphanumeric sections rows for the "Straight Stagger"
+partial hidden xkb_geometry "num_straight" {
+  section "num" {top=30; 
+    row {top=  1; keys {{<~>,"W125"},<1>,<2>,<3>,<4>,<5>,<6>,<7>,<8>,<9>,<0>,<->,<=>,{<BKSP>,"W175"}};};
+  };
+};
+partial hidden xkb_geometry "tab_straight" {
+  section "tab" {top=30; 
+    row {top= 21; keys {{<TAB>,"W125"},<Q>,<W>,<E>,<R>,<T>,<Y>,<U>,<I>,<O>,<P>,<[>,<]>};};
+  };
+};
+partial hidden xkb_geometry "home_straight" {
+  section "home" {top=30; 
+    row {top= 41; keys {{<CAPS>,"W125"},<A>,<S>,<D>,<F>,<G>,<H>,<J>,<K>,<L>,<;>,<'>};};
+  };
+};
+partial hidden xkb_geometry "shift_straight" {
+  section "shift" {top=30; 
+    row {top= 61; keys {{<Z>,26},<X>,<C>,<V>,<B>,<N>,<M>,<,>,<.>,</>};};
+  };
+};
+partial hidden xkb_geometry "return_straight" {
+  section "return" {top=30; 
+    row {top=  21; keys {{<\\\\>,"W175",266}};};
+    row {top=  41; keys {{<RTRN>,"W275",246}};};
+  };
+};
+partial hidden xkb_geometry "lshift_straight" {
+  section "lshift" {top=30; 
+    row {top=  61; keys {{<SHFT>,"W125"}};};
+  };
+};
+partial hidden xkb_geometry "rshift_straight" {
+  section "rshift" {top=30; 
+    row {top=  61; keys {{<SHFT>,"W275",226},<?>};};
+  };
+};
+
+// Alphanumeric sections rows for the "7bit Hexagonal Stagger"
+partial hidden xkb_geometry "home_hexagonal" {
+  section "home" {top=30; 
+    row {top= 41; keys {{<CAPS>,"W100"},<?>,<A>,<S>,<D>,<F>,<G>,<H>,<J>,<K>,<L>,<;>,<'>};};
+  };
+};
+partial hidden xkb_geometry "shift_hexagonal" {
+  section "shift" {top=30; 
+    row {top= 61; keys {{<Z>,51},<X>,<C>,<V>,<B>,<N>,<M>,<,>,<.>,</>};};
+  };
+};
+partial hidden xkb_geometry "return_hexagonal" {
+  section "return" {top=30; 
+    row {top=  21; keys {{<\\\\>,"W150",271}};};
+    row {top=  41; keys {{<?>,261},<RTRN>};};
+  };
+};
+partial hidden xkb_geometry "lshift_hexagonal" {
+  section "lshift" {top=30; 
+    row {top=  61; keys {<?>,{<SHFT>,"W150"}};};
+  };
+};
+partial hidden xkb_geometry "rshift_hexagonal" {
+  section "rshift" {top=30; 
+    row {top=  61; keys {{<SHFT>,"W150",251},<?>};};
+  };
+};
+
+// Spacebar rows.
+partial hidden xkb_geometry "space_filco_regular" {
+  section "space" {top=30; 
+    row {top= 81; keys {{<CTRL>,"W125"},{<SUPR>,"W125"},{<ALT>,"W125"},{<SPCE>,"W625"},{<ALT>,"W125"},{<SUPR>,"W125"},{<MENU>,"W125"},{<CTRL>,"W125"}};};
+  };
+};
+partial hidden xkb_geometry "space_filco_japanese" {
+  section "space" {top=30; 
+    row {top= 81; keys {{<CTRL>,"W125"},<SUPR>,{<ALT>,"W125"},<-JAP>,{<SPCE>,"W450"},{<JAP>,"W125"},{<KANA>,"W125"},{<ALT>,"W125"},<MENU>,{<CTRL>,"W125"}};};
+  };
+};
+partial hidden xkb_geometry "space_realforce" {
+  section "space" {top=30; 
+    row {top= 81; keys {{<CTRL>,"W150"},<SUPR>,{<ALT>,"W150"},{<SPCE>,"W600"},{<ALT>,"W150"},<SUPR>,<MENU>,{<CTRL>,"W150"}};};
+  };
+};
+partial hidden xkb_geometry "space_7bit" {
+  section "space" {top=30; 
+    row {top= 81; keys {{<CTRL>,"W150"},<SUPR>,{<ALT>,"W150"},{<7BIT>,"W150"},{<7BIT>,"W150"},{<SPCE>,"W100"},{<7BIT>,"W150"},{<ALT>,"W150"},{<SUPR>,"W150"},<MENU>,{<CTRL>,"W150"}};};
+  };
+};
+partial hidden xkb_geometry "space_symmetric" {
+  section "space" {top=30; 
+    row {top= 81; keys {{<CTRL>,"W150"},{<SUPR>,"W150"},{<ALT>,"W150"},{<BKSP>,"W200"},{<RTRN>,"W200"},{<SPCE>,"W200"},{<ALTG>,"W150"},{<MENU>,"W150"},{<CTRL>,"W150"}};};
+  };
+};
+partial hidden xkb_geometry "space_arrows" {
+  section "space" {top=30; 
+    row {top= 81; keys {{<CTRL>,"W125"},<SUPR>,{<ALT>,"W125"},{<SPCE>,"W400"},{<ALT>,"W125"},<SUPR>,<MENU>,{<CTRL>,"W125"}};};
+  };
+};
+
+
+
+
+// Navigation blocks.
+partial hidden xkb_geometry "nav_block_regular" {
+  section "nav_block" {top=5; left=310;
+    row {top=  1; keys {<PRSC>,<SCLK>,<PAUS>};}; 
+    row {top= 26; keys {<INS>,<HOME>,<PGUP>};}; 
+    row {top= 46; keys {<DEL>,<END>,<PGDN>};}; 
+    row {top= 86; keys {{<UP>,21}};}; 
+    row {top=106;keys {<LEFT>,<DOWN>,<RGHT>};};
+  };
+};
+partial hidden xkb_geometry "nav_block_filled" {
+  section "nav_block" {top=5; left=310;
+    row {top=  1; keys {<PRSC>,<SCLK>,<PAUS>};}; 
+    row {top= 26; keys {<INS>,<HOME>,<PGUP>};}; 
+    row {top= 46; keys {<DEL>,<END>,<PGDN>};}; 
+    row {top= 66; keys {<?>,<?>,<?>};}; 
+    row {top= 86; keys {<?>,<UP>,<?>};}; 
+    row {top=106;keys {<LEFT>,<DOWN>,<RGHT>};};
+  };
+};
+
+// Numpads.
+partial hidden xkb_geometry "numpad_regular" {
+  section "numpad" {top=5;left=375; 
+    row {top= 26; keys {<NMLK>,</>,<*>,<->};};
+    row {top= 46; keys {<7>,<8>,<9>,{<+>,"H200"}};};
+    row {top= 66; keys {<4>,<5>,<6>};};
+    row {top= 86; keys {<1>,<2>,<3>,{<ENTR>,"H200"}};};
+    row {top=106; keys {{<0>,"W200"},<.>};};
+  };
+};
+partial hidden xkb_geometry "numpad_split" {
+  section "numpad" {top=5;left=375; 
+    row {top=  1; keys {{<?>,"W200"},{<?>,"W200"}};};
+    row {top= 26; keys {<NMLK>,</>,<*>,<->};};
+    row {top= 46; keys {<7>,<8>,<9>,{<+>,"H200"}};};
+    row {top= 66; keys {<4>,<5>,<6>};};
+    row {top= 86; keys {<1>,<2>,<3>,{<ENTR>,"H200"}};};
+    row {top=106; keys {{<0>,"W200"},<.>};};
+  };
+};
+partial hidden xkb_geometry "numpad_function_row" {
+  section "numpad_function" {top=5;left=375; 
+    row {top=  1; keys {<?>,<?>,<?>,<?>};};
+  };
+};
+
+// Keysize definitions
+partial hidden xkb_geometry "keys_regular" {
+  shape "W025" {primary={[4,19]}};
+  shape "W050" {primary={[9,19]}};
+  shape "W075" {primary={[14,19]}};
+  shape "W100" {primary={[19,19]},{[3,2],[16,16]}};
+  shape "W125" {primary={[24,19]},{[3,2],[21,16]}};
+  shape "W150" {primary={[29,19]},{[3,2],[26,16]}};
+  shape "W175" {primary={[34,19]},{[3,2],[31,16]}};
+  shape "W200" {primary={[39,19]},{[3,2],[36,16]}};
+  shape "W225" {primary={[44,19]},{[3,2],[41,16]}};
+  shape "W275" {primary={[54,19]},{[3,2],[51,16]}};
+  shape "W300" {primary={[59,19]},{[3,2],[56,16]}};
+  shape "W400" {primary={[79,19]},{[3,2],[76,16]}};
+  shape "W450" {primary={[89,19]},{[3,2],[86,16]}};
+  shape "W500" {primary={[99,19]},{[3,2],[96,16]}};
+  shape "W600" {primary={[119,19]},{[3,2],[116,16]}};
+
+  shape "W675" {primary={[134,19]},{[3,2],[131,16]}};
+
+  shape "W700" {primary={[139,19]},{[3,2],[136,16]}};
+  shape "W800" {primary={[159,19]},{[3,2],[156,16]}};
+  shape "W900" {primary={[179,19]},{[3,2],[176,16]}};
+  shape "W1K0" {primary={[199,19]},{[3,2],[196,16]}};
+  shape "W625" {primary={[124,19]},{[3,2],[121,16]}};
+  shape "H200" {primary={[19,39]},{[3,2],[16,36]}};
+  shape "ISOR" {approx={[0,0],[28,19]},{[0,0],[29,0],[29,39],[5,39],[5,19],[0,19]},{[3,2],[26,2],[26,36],[8,36],[8,16],[3,16]}};
+};
